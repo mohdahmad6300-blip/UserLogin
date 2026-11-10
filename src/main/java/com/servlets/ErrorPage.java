@@ -1,0 +1,148 @@
+package com.servlets;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+
+@WebServlet("/ErrorPage")
+public class ErrorPage extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		
+		String html ="<!DOCTYPE html>\r\n"
+				+ "<html>\r\n"
+				+ "<head>\r\n"
+				+ "    <title>Login Failed</title>\r\n"
+				+ "\r\n"
+				+ "    <style>\r\n"
+				+ "        * {\r\n"
+				+ "            margin: 0;\r\n"
+				+ "            padding: 0;\r\n"
+				+ "            box-sizing: border-box;\r\n"
+				+ "            font-family: Arial, sans-serif;\r\n"
+				+ "        }\r\n"
+				+ "\r\n"
+				+ "        body {\r\n"
+				+ "            height: 100vh;\r\n"
+				+ "            display: flex;\r\n"
+				+ "            justify-content: center;\r\n"
+				+ "            align-items: center;\r\n"
+				+ "            background: linear-gradient(135deg, #667eea, #764ba2);\r\n"
+				+ "        }\r\n"
+				+ "\r\n"
+				+ "        .error-container {\r\n"
+				+ "            width: 400px;\r\n"
+				+ "            padding: 40px 30px;\r\n"
+				+ "            background: white;\r\n"
+				+ "            border-radius: 18px;\r\n"
+				+ "            text-align: center;\r\n"
+				+ "            box-shadow: 0 10px 30px rgba(0,0,0,0.2);\r\n"
+				+ "        }\r\n"
+				+ "\r\n"
+				+ "        .error-icon {\r\n"
+				+ "            width: 85px;\r\n"
+				+ "            height: 85px;\r\n"
+				+ "            line-height: 85px;\r\n"
+				+ "            margin: 0 auto 20px;\r\n"
+				+ "            background: #ffe5e5;\r\n"
+				+ "            color: #e74c3c;\r\n"
+				+ "            border-radius: 50%;\r\n"
+				+ "            font-size: 50px;\r\n"
+				+ "            font-weight: bold;\r\n"
+				+ "        }\r\n"
+				+ "\r\n"
+				+ "        h1 {\r\n"
+				+ "            color: #333;\r\n"
+				+ "            margin-bottom: 12px;\r\n"
+				+ "            font-size: 28px;\r\n"
+				+ "        }\r\n"
+				+ "\r\n"
+				+ "        p {\r\n"
+				+ "            color: #777;\r\n"
+				+ "            font-size: 15px;\r\n"
+				+ "            line-height: 1.6;\r\n"
+				+ "            margin-bottom: 25px;\r\n"
+				+ "        }\r\n"
+				+ "\r\n"
+				+ "        .error-message {\r\n"
+				+ "            background: #fff0f0;\r\n"
+				+ "            color: #d63031;\r\n"
+				+ "            padding: 12px;\r\n"
+				+ "            border-radius: 8px;\r\n"
+				+ "            font-size: 14px;\r\n"
+				+ "            margin-bottom: 25px;\r\n"
+				+ "        }\r\n"
+				+ "\r\n"
+				+ "        button {\r\n"
+				+ "            width: 100%;\r\n"
+				+ "            padding: 13px;\r\n"
+				+ "            background: #667eea;\r\n"
+				+ "            color: white;\r\n"
+				+ "            border: none;\r\n"
+				+ "            border-radius: 8px;\r\n"
+				+ "            font-size: 16px;\r\n"
+				+ "            cursor: pointer;\r\n"
+				+ "            transition: 0.3s;\r\n"
+				+ "        }\r\n"
+				+ "\r\n"
+				+ "        button:hover {\r\n"
+				+ "            background: #764ba2;\r\n"
+				+ "            transform: translateY(-2px);\r\n"
+				+ "        }\r\n"
+				+ "\r\n"
+				+ "        .footer {\r\n"
+				+ "            margin-top: 22px;\r\n"
+				+ "            font-size: 13px;\r\n"
+				+ "            color: #999;\r\n"
+				+ "        }\r\n"
+				+ "\r\n"
+				+ "    </style>\r\n"
+				+ "</head>\r\n"
+				+ "\r\n"
+				+ "<body>\r\n"
+				+ "\r\n"
+				+ "    <div class=\"error-container\">\r\n"
+				+ "\r\n"
+				+ "        <div class=\"error-icon\">\r\n"
+				+ "            !\r\n"
+				+ "        </div>\r\n"
+				+ "\r\n"
+				+ "        <h1>Login Failed!</h1>\r\n"
+				+ "\r\n"
+				+ "        <p>\r\n"
+				+ "            Oops! We couldn't verify your login details.\r\n"
+				+ "            Please check your email and password and try again.\r\n"
+				+ "        </p>\r\n"
+				+ "\r\n"
+				+ "        <div class=\"error-message\">\r\n"
+				+ "            Invalid Email or Password!\r\n"
+				+ "        </div>\r\n"
+				+ "\r\n"
+				+ "        <button onclick=\"window.location.href='Index.html'\">\r\n"
+				+ "            Try Again\r\n"
+				+ "        </button>\r\n"
+				+ "\r\n"
+				+ "        <div class=\"footer\">\r\n"
+				+ "            User Management System\r\n"
+				+ "        </div>\r\n"
+				+ "\r\n"
+				+ "    </div>\r\n"
+				+ "\r\n"
+				+ "</body>\r\n"
+				+ "</html>";
+		
+		System.out.println("Error pages called");
+		out.print(html);
+		
+	}
+
+}

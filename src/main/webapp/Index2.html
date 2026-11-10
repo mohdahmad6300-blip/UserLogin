@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .container {
+            width: 400px;
+            padding: 35px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .input-box {
+            margin-bottom: 18px;
+        }
+
+        .input-box label {
+            display: block;
+            margin-bottom: 7px;
+            color: #444;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .input-box input,
+        .input-box select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+            background: white;
+        }
+
+        .input-box input:focus,
+        .input-box select:focus {
+            border-color: #667eea;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #764ba2;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .login-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Create Account</h2>
+
+        <p class="subtitle">Register for User Management System</p>
+
+        <form action="SignUp" method="post">
+
+            <div class="input-box">
+                <label>Username</label>
+                <input type="text" name="name"
+                       placeholder="Enter your username" required>
+            </div>
+
+            <div class="input-box">
+                <label>Email Address</label>
+                <input type="email" name="email"
+                       placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-box">
+                <label>Password</label>
+                <input type="password" name="password"
+                       placeholder="Create a password" required>
+            </div>
+
+            <div class="input-box">
+                <label>Select Role</label>
+
+                <select name="role" required>
+                    <option value="">-- Select Role --</option>
+                    <option value="ADMIN">Admin</option>
+                    <option value="USER">User</option>
+                </select>
+
+            </div>
+
+            <button type="submit">Register Now</button>
+
+            <div class="login-link">
+                Already have an account?
+                <a href="Index.html">Login</a>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

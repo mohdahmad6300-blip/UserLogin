@@ -1,0 +1,56 @@
+# Eclipse Core Metadata
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+
+# External Tools / Launch Configurations
+.externalToolBuilders/
+*.launch
+
+# Classpath and Project Files (Optional)
+# Uncomment these if you want every developer to generate their own local project structure
+# .classpath
+# .project
+
+# JavaScript / Tern
+.tern-project
+
+# Monitored Tools / Framework Plugins
+.recommenders/
+.loadpath
+
+# Scalastyle / Scala IDE
+.cache-main
+.scala_dependencies
+.worksheet
+
+# PyDev (Python Plugin for Eclipse)
+*.pydevproject
+
+# CDT (C/C++ Development Tooling)
+.cproject
+.autotools
+
+# APT (Annotation Processing Toolkit)
+.factorypath
+.apt_generated/
+.apt_generated_tests/
+
+# PDT (PHP Development Tools)
+.buildpath
+
+# sbteclipse
+.target
+
+# TeXlipse
+.texlipse
+
+# Spring Source Suite
+.springBeans
+.sts4-cache
